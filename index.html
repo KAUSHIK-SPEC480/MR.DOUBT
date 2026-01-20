@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mr.Doubt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HOME PAGE -->
+  <div id="home">
+    <h1 class="logo-text">MR.DOUBT</h1>
+    <p class="tagline">Doubts Out. Clarity In.</p>
+
+    <div class="subjects">
+      <button onclick="openSubject('Maths')">Maths</button>
+      <button onclick="openSubject('English')">English</button>
+      <button onclick="openSubject('Hindi')">Hindi</button>
+      <button onclick="openSubject('Science')">Science</button>
+      <button onclick="openSubject('Social Science')">Social Science</button>
+    </div>
+  </div>
+
+  <!-- SUBJECT PAGE -->
+  <div id="subjectPage">
+    <button class="back" onclick="goHome()">← Back</button>
+    <h2 id="subjectTitle"></h2>
+
+    <div id="doubtList"></div>
+
+    <button class="plus-btn" onclick="openDoubtBox()">+</button>
+
+    <div id="doubtBox">
+      <h3>Add Your Doubt</h3>
+
+      <textarea id="doubtText" placeholder="Type your doubt here..."></textarea>
+
+      <div class="upload">
+        <label>🎤 Voice
+          <input type="file" accept="audio/*" />
+        </label>
+        <label>🖼️ Image
+          <input type="file" accept="image/*" />
+        </label>
+      </div>
+
+      <button class="submit" onclick="submitDoubt()">Submit</button>
+      <button class="cancel" onclick="closeDoubtBox()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- LEADERBOARD -->
+  <div id="leaderboardBox">
+    <h3>🏆 Leaderboard</h3>
+    <div id="leaderboard"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
